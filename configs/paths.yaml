@@ -1,0 +1,42 @@
+# Bản đồ đường dẫn của dự án — tài liệu tham chiếu, KHÔNG phải config thực nghiệm.
+# Hiện chưa có script nào đọc tệp này: notebook vẫn khai báo đường dẫn ở cell tham số (SPECS Phụ lục B).
+# Khi đổi vị trí dữ liệu trên Drive: sửa tệp này trước, rồi sửa cell đầu của 5 notebook và configs/data.yaml (khối paths) cho khớp.
+#
+# Quy ước: mọi đường dẫn trong `drive` là tương đối so với `drive.root`; `{ds}` ∈ {luna16, lidc}.
+# Lưu ý trạng thái: cấu trúc dữ liệu thực tế trên Drive sẽ được khảo sát trước qua các notebook đầu,
+# sau khi có kết quả khảo sát mới chốt cấu trúc đường dẫn và thiết kế lộ trình xử lý tiếp theo.
+
+# --- Máy local (chỉ mã nguồn; không đồng bộ Drive, không chứa dữ liệu) ---
+local:
+  repo_root: "E:/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
+  venv: ".venv"                                  # Python 3.12.10 + requirements-local.txt, không có torch
+  python_version_file: ".python-version"
+
+# --- GitHub (kênh đưa mã nguồn lên Colab) ---
+git:
+  repo_url: "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"   # private; token qua Colab Secrets GH_TOKEN
+  branch: main
+
+# --- Google Drive (toàn bộ dữ liệu và kết quả) ---
+drive:
+  mount_point: "/content/drive"
+  root: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"   # = DRIVE_ROOT trong notebook
+  raw:
+    luna16: "data/raw/LUNA16"                    # cấu trúc thực tế sẽ xác nhận sau bước khảo sát ở các notebook đầu
+    lidc: "data/raw/LIDC-IDRI"                   # cấu trúc thực tế sẽ xác nhận sau bước khảo sát ở các notebook đầu
+  processor: "data/processor"                    # toàn bộ notebook dùng để xử lý dữ liệu (cùng cấp với data/raw trên Drive)
+  index: "data/index"                            # ct_scans.csv, seg_index.csv, luna16_scans.csv, index_summary.json, survey_* (notebook 00)
+  interim: "data/interim/{ds}"                   # patches_hu.npy, masks.npy, patches.csv, by_scan/<series_uid>/_DONE (notebook 01)
+  splits: "data/splits/{ds}.json"                # kết quả make_splits
+  processed: "data/processed/{ds}"               # {train,val,test}.h5, manifest.json, patches.csv, {ds}.json
+  processed_s1_slice: "data/processed_s1_slice/{ds}"   # thử nghiệm S1 (chia theo slice)
+  processed_s5_jitter: "data/processed_s5_jitter/{ds}" # thử nghiệm S5 (center_jitter_px: 8)
+  experiments: "experiments"                     # experiments/{ds}/<run_name>/ (config_resolved.yaml, last.pt, best.pt, train_log.csv, eval_*)
+  reports: "reports"                             # compare_table{5,6,7}.md, seed_variance.md (notebook 12)
+  figures: "reports/figures"                     # hình của src.visualize
+
+# --- Ổ cục bộ của máy ảo Colab (nhanh nhưng mất khi hết phiên) ---
+colab:
+  repo_dir: "/content/MV_CAAFNet"                # nơi clone repo
+  pack_tmp: "/content/processed_tmp/{ds}"        # pack_h5 ghi .h5 ở đây rồi copy 1 lần sang drive.processed
+  data_dir: "/content/processed"                 # train/evaluate copy .h5 từ Drive về đây (--data-dir)
