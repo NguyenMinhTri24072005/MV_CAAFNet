@@ -1,0 +1,198 @@
+==============================================================================
+DATASET: D:\GG_1\COMPUTER SCIENCE\NAM4_HK1_(2026-2027)\CT208E\MV_CAAFNet\data\raw\LUNA16
+==============================================================================
+
+Quet xong sau 1s
+TONG: 3,588 file, 111.58 GB
+Co file: trung binh 31.85 MB, trung vi 518 B, nho nhat 106 B, lon nhat 382.00 MB
+File < 1 MB: 2,609 (72.7%)
+
+-- Cac duoi file (so luong, dung luong) --
+  .mhd               1,776 file      758.61 KB
+  .raw                 888 file      110.95 GB
+  .zraw                888 file      437.87 MB
+  .ini                  18 file        1.86 KB
+  .csv                  10 file      190.17 MB
+  .py                    4 file       23.56 KB
+  .txt                   3 file       20.24 MB
+  .png                   1 file      201.87 KB
+
+-- Cay thu muc (do sau 3) --
+LUNA16/  [3,588 file, 111.58 GB]
+├── evaluationScript/  [20 file, 88.92 MB]
+│   ├── annotations/  [4 file, 3.56 MB]
+│   ├── exampleFiles/  [10 file, 85.34 MB]
+│   │   ├── evaluation/  [7 file, 28.78 MB]
+│   │   └── submission/  [2 file, 56.56 MB]
+│   └── tools/  [3 file, 1.00 KB]
+├── seg-lungs-LUNA16/  [1,777 file, 438.26 MB]
+├── subset0/  [179 file, 11.17 GB]
+├── subset1/  [179 file, 10.57 GB]
+├── subset2/  [179 file, 12.09 GB]
+├── subset3/  [179 file, 11.67 GB]
+├── subset4/  [179 file, 11.43 GB]
+├── subset5/  [179 file, 11.03 GB]
+├── subset6/  [179 file, 11.12 GB]
+├── subset7/  [179 file, 10.85 GB]
+├── subset8/  [177 file, 9.84 GB]
+└── subset9/  [177 file, 11.19 GB]
+
+-- 10 file lon nhat --
+     382.00 MB  subset3\1.3.6.1.4.1.14519.5.2.1.6279.6001.162845309248822193437735868939.raw
+     366.50 MB  subset0\1.3.6.1.4.1.14519.5.2.1.6279.6001.430109407146633213496148200410.raw
+     365.00 MB  subset0\1.3.6.1.4.1.14519.5.2.1.6279.6001.146429221666426688999739595820.raw
+     341.00 MB  subset2\1.3.6.1.4.1.14519.5.2.1.6279.6001.221945191226273284587353530424.raw
+     336.00 MB  subset0\1.3.6.1.4.1.14519.5.2.1.6279.6001.126264578931778258890371755354.raw
+     318.00 MB  subset1\1.3.6.1.4.1.14519.5.2.1.6279.6001.168037818448885856452592057286.raw
+     316.50 MB  subset5\1.3.6.1.4.1.14519.5.2.1.6279.6001.110678335949765929063942738609.raw
+     302.50 MB  subset1\1.3.6.1.4.1.14519.5.2.1.6279.6001.168605638657404145360275453085.raw
+     301.00 MB  subset3\1.3.6.1.4.1.14519.5.2.1.6279.6001.215086589927307766627151367533.raw
+     295.00 MB  subset6\1.3.6.1.4.1.14519.5.2.1.6279.6001.247816269490470394602288565775.raw
+
+-- Vi du 3 duong dan file (de xem do sau thuc te) --
+  annotations.csv
+  evaluationScript\desktop.ini
+  evaluationScript\annotations\annotations.csv
+
+==============================================================================
+DATASET: D:\GG_1\COMPUTER SCIENCE\NAM4_HK1_(2026-2027)\CT208E\MV_CAAFNet\data\raw\LIDC-IDRI
+==============================================================================
+
+Quet xong sau 82s
+TONG: 267,852 file, 121.70 GB
+Co file: trung binh 476.43 KB, trung vi 513.99 KB, nho nhat 106 B, lon nhat 15.34 MB
+File < 1 MB: 267,734 (100.0%)
+
+-- Cac duoi file (so luong, dung luong) --
+  .dcm             250,907 file      121.68 GB
+  .ini               8,978 file      929.36 KB
+  (khong_duoi)       7,967 file       21.18 MB
+
+-- Cay thu muc (do sau 3) --
+LIDC-IDRI/  [267,852 file, 121.70 GB]
+├── LIDC-IDRI-0001/  [148 file, 67.82 MB]
+│   ├── CT_20603192/  [135 file, 66.78 MB]
+│   ├── SEG_1.471973/  [3 file, 234.10 KB]
+│   ├── SEG_5.626419/  [3 file, 266.78 KB]
+│   ├── SEG_7.990548/  [3 file, 266.78 KB]
+│   └── SEG_9.860324/  [3 file, 299.43 KB]
+├── LIDC-IDRI-0002/  [270 file, 132.67 MB]
+│   ├── CT_49104919/  [263 file, 131.03 MB]
+│   ├── SEG_5.863850/  [3 file, 756.95 KB]
+│   └── SEG_7.905274/  [3 file, 920.38 KB]
+├── LIDC-IDRI-0003/  [182 file, 72.79 MB]
+│   ├── CT_80003264/  [142 file, 70.29 MB]
+│   ├── SEG_0.366467/  [3 file, 234.10 KB]
+│   ├── SEG_1.114003/  [3 file, 70.70 KB]
+│   ├── SEG_1.490943/  [3 file, 168.74 KB]
+│   ├── SEG_1.867649/  [3 file, 266.75 KB]
+│   ├── SEG_3.248397/  [3 file, 234.10 KB]
+│   ├── SEG_4.398726/  [3 file, 332.11 KB]
+│   ├── SEG_4.504200/  [3 file, 136.06 KB]
+│   ├── SEG_4.847267/  [3 file, 168.74 KB]
+│   ├── SEG_6.900794/  [3 file, 234.10 KB]
+│   ├── SEG_7.746149/  [3 file, 136.06 KB]
+│   ├── SEG_7.903792/  [3 file, 136.03 KB]
+│   └── ... va 2 thu muc con khac (vi du ten: SEG_8.247904, SEG_9.555761)
+├── LIDC-IDRI-0004/  [256 file, 121.53 MB]
+│   ├── CT_12458228/  [243 file, 121.00 MB]
+│   ├── SEG_1.846765/  [3 file, 103.38 KB]
+│   ├── SEG_3.128614/  [3 file, 168.71 KB]
+│   ├── SEG_6.419344/  [3 file, 136.06 KB]
+│   └── SEG_7.540153/  [3 file, 136.06 KB]
+├── LIDC-IDRI-0005/  [163 file, 67.43 MB]
+│   ├── CT_36686225/  [135 file, 66.78 MB]
+│   ├── SEG_0.423154/  [3 file, 38.02 KB]
+│   ├── SEG_0.863861/  [3 file, 70.70 KB]
+│   ├── SEG_3.499678/  [3 file, 70.70 KB]
+│   ├── SEG_4.200390/  [3 file, 70.67 KB]
+│   ├── SEG_4.493595/  [3 file, 70.70 KB]
+│   ├── SEG_6.641778/  [3 file, 103.35 KB]
+│   ├── SEG_7.328992/  [3 file, 103.38 KB]
+│   ├── SEG_7.823284/  [3 file, 70.70 KB]
+│   └── SEG_9.795180/  [3 file, 70.70 KB]
+├── LIDC-IDRI-0006/  [160 file, 67.39 MB]
+│   ├── CT_24920957/  [135 file, 66.77 MB]
+│   ├── SEG_0.875321/  [3 file, 103.38 KB]
+│   ├── SEG_09.77342/  [3 file, 70.69 KB]
+│   ├── SEG_3.209045/  [3 file, 38.02 KB]
+│   ├── SEG_3.690896/  [3 file, 70.70 KB]
+│   ├── SEG_4.101572/  [3 file, 103.35 KB]
+│   ├── SEG_6.639961/  [3 file, 38.02 KB]
+│   ├── SEG_7.505975/  [3 file, 70.70 KB]
+│   └── SEG_9.923445/  [3 file, 136.03 KB]
+├── LIDC-IDRI-0007/  [163 file, 74.65 MB]
+│   ├── CT_30857680/  [147 file, 72.80 MB]
+│   ├── SEG_2.412831/  [3 file, 430.15 KB]
+│   ├── SEG_3.443614/  [3 file, 364.82 KB]
+│   ├── SEG_6.450777/  [3 file, 397.50 KB]
+│   ├── SEG_7.894272/  [3 file, 364.82 KB]
+│   └── SEG_8.527331/  [3 file, 332.13 KB]
+├── LIDC-IDRI-0008/  [157 file, 67.29 MB]
+│   ├── CT_29821954/  [135 file, 66.78 MB]
+│   ├── SEG_1.674114/  [3 file, 70.70 KB]
+│   ├── SEG_18.82328/  [3 file, 103.34 KB]
+│   ├── SEG_2.246166/  [3 file, 70.70 KB]
+│   ├── SEG_4.933182/  [3 file, 70.70 KB]
+│   ├── SEG_5.300965/  [3 file, 70.67 KB]
+│   ├── SEG_8.366232/  [3 file, 70.70 KB]
+│   └── SEG_9.195015/  [3 file, 70.70 KB]
+├── LIDC-IDRI-0009/  [265 file, 128.76 MB]
+│   ├── CT_12429210/  [258 file, 128.52 MB]
+│   ├── SEG_3.286622/  [3 file, 103.38 KB]
+│   └── SEG_9.214309/  [3 file, 136.06 KB]
+├── LIDC-IDRI-0010/  [301 file, 140.10 MB]
+│   ├── CT_05866796/  [279 file, 139.07 MB]
+│   ├── SEG_1.253519/  [3 file, 136.06 KB]
+│   ├── SEG_1.759403/  [3 file, 168.71 KB]
+│   ├── SEG_4.783494/  [3 file, 136.06 KB]
+│   ├── SEG_5.327866/  [3 file, 136.06 KB]
+│   ├── SEG_7.686335/  [3 file, 201.39 KB]
+│   ├── SEG_8.242015/  [3 file, 136.06 KB]
+│   └── SEG_9.316162/  [3 file, 136.03 KB]
+├── LIDC-IDRI-0011/  [200 file, 66.75 MB]
+│   ├── CT_68423138/  [130 file, 64.27 MB]
+│   ├── SEG_0.538903/  [3 file, 70.67 KB]
+│   ├── SEG_0.667842/  [3 file, 103.38 KB]
+│   ├── SEG_1.126356/  [3 file, 103.38 KB]
+│   ├── SEG_1.627308/  [3 file, 70.70 KB]
+│   ├── SEG_1.671239/  [3 file, 136.06 KB]
+│   ├── SEG_2.764127/  [3 file, 70.70 KB]
+│   ├── SEG_20.60439/  [3 file, 168.74 KB]
+│   ├── SEG_3.226268/  [3 file, 201.42 KB]
+│   ├── SEG_3.567109/  [3 file, 70.70 KB]
+│   ├── SEG_3.683350/  [3 file, 103.35 KB]
+│   ├── SEG_4.336275/  [3 file, 103.35 KB]
+│   └── ... va 12 thu muc con khac (vi du ten: SEG_4.631653, SEG_4.946305, SEG_5.606471)
+├── LIDC-IDRI-0012/  [239 file, 68.12 MB]
+│   ├── CT_38457842/  [130 file, 64.27 MB]
+│   ├── SEG_0.537986/  [3 file, 103.38 KB]
+│   ├── SEG_0.813801/  [3 file, 103.38 KB]
+│   ├── SEG_0.834560/  [3 file, 103.35 KB]
+│   ├── SEG_1.265538/  [3 file, 168.71 KB]
+│   ├── SEG_1.267120/  [3 file, 103.36 KB]
+│   ├── SEG_1.606004/  [3 file, 103.35 KB]
+│   ├── SEG_10.75616/  [3 file, 70.69 KB]
+│   ├── SEG_2.167934/  [3 file, 103.38 KB]
+│   ├── SEG_2.540614/  [3 file, 103.38 KB]
+│   ├── SEG_2.762240/  [3 file, 103.38 KB]
+│   ├── SEG_2.913313/  [3 file, 103.38 KB]
+│   └── ... va 25 thu muc con khac (vi du ten: SEG_3.142359, SEG_3.573386, SEG_4.129414)
+└── ... va 998 thu muc con khac (vi du ten: LIDC-IDRI-0013, LIDC-IDRI-0014, LIDC-IDRI-0015)
+
+-- 10 file lon nhat --
+      15.34 MB  LIDC-IDRI-0963\SEG_8.696504\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_7.963704\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_6.241579\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_4.950088\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_4.650517\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_3.380755\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_3.223989\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_2.569432\00000001.dcm
+      15.34 MB  LIDC-IDRI-0963\SEG_2.537339\00000001.dcm
+      11.82 MB  LIDC-IDRI-0811\SEG_8.600380\00000001.dcm
+
+-- Vi du 3 duong dan file (de xem do sau thuc te) --
+  desktop.ini
+  LIDC-IDRI-0001\desktop.ini
+  LIDC-IDRI-0001\CT_20603192\00000001.dcm

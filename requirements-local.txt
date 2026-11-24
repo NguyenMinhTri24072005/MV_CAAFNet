@@ -1,0 +1,15 @@
+# Local Windows CPU (Python 3.12.10, xem .python-version) — SPECS §0.1
+# Dùng để viết mã, chạy pytest nhẹ (tests/test_config.py, tests/test_ct_utils.py), debug --limit 3.
+# KHÔNG cài torch/torchvision ở local (train chỉ chạy trên Colab Pro GPU).
+# KHÔNG dùng pylidc / SQLAlchemy<2 / numpy<2: data/raw/LIDC-IDRI là IDC DICOM-SEG, đọc bằng pydicom + SimpleITK.
+numpy
+scipy
+pandas
+h5py
+pyyaml
+pydicom
+SimpleITK
+scikit-image
+matplotlib
+tqdm
+pytest

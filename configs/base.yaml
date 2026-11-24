@@ -1,0 +1,52 @@
+# Siêu tham số chung cho mọi thực nghiệm — SPECS §0.3.2
+# [P] lấy từ bài báo, [A] giả định của nhóm phục dựng, [F] sửa lỗi bài báo.
+# Config con khai báo `base: base.yaml` và chỉ ghi phần khác; ghi đè thêm bằng cờ tắt CLI hoặc --set a.b.c=value.
+seed: 42                                   # [A]
+dataset: null                              # gán từ CLI --dataset khi train và lưu vào config_resolved.yaml
+model:
+  name: caaf_resunet                       # caaf_resunet | resunetpp
+  in_channels: 1                           # [P] CT 1 kênh
+  channels: [32, 64, 128, 256]             # [P] §2.1: 64×64×32 … 8×8×256
+  upsample: convtranspose                  # [P] Figure 1: ConvTranspose2d(ch→ch, k=2, s=2 [A])
+  aac:
+    pool_size: 8                           # [P] Alg. 1, H'=W'=8
+    qkv_bias: false                        # [A] Eq. 3 không có bias
+  attention:
+    pam_reduction: 8                       # [A] DANet: Q, K có C/8 kênh
+    att_sigmoid: false                     # [A] AttentionModule decoder không dùng sigmoid mặc định
+  aspp:
+    rates: [6, 12, 18]                     # [P]
+    gap: false                             # [A] Figure 1 không vẽ GAP; để tùy chọn
+  se_reduction: 8                          # [A] chỉ dùng cho resunetpp
+aaf:
+  mode: adaptive                           # pa | ca | static | adaptive (bỏ qua khi model.name=resunetpp)
+  static_weights: [0.5, 0.5]               # [P] Exp. 2
+loss:
+  name: dice                               # dice | dice+sobel | dice+laplacian | dice+hausdorff
+  lambda: 1.0                              # [P] Eq. 14 không có hệ số
+  dice_eps: 1.0e-6                         # [A]
+  sobel_eps: 1.0e-8                        # [A] ε trong căn bậc hai
+  hausdorff_mode: soft_pg_detach_gp        # [A] soft_pg_detach_gp | bidir_soft | karimi_sq (S3)
+  hausdorff_empty_value: 90.51             # [A] 64·√2, dùng khi P nhị phân rỗng
+data:
+  patch_size: 64                           # [P]
+  augment: false                           # [A] bài báo không nhắc augmentation
+  num_workers: 2
+train:
+  epochs: 100                              # [P] Figure 2
+  batch_size: 16                           # [A]
+  optimizer:
+    name: adamw                            # [P]
+    lr: 1.0e-4                             # [P]
+    weight_decay: 0.01                     # [A] mặc định PyTorch
+    betas: [0.9, 0.999]                    # [A]
+  scheduler:
+    name: steplr                           # [P]
+    step_size: 30                          # [P]
+    gamma: 0.1                             # [P]
+  amp: false                               # [A] bật nếu GPU thiếu bộ nhớ
+  grad_clip: null                          # [A]
+  deterministic: false
+eval:
+  threshold: 0.5                           # [A]
+  ckpt: last                               # [A] bài báo không có tập val → báo cáo chính dùng last

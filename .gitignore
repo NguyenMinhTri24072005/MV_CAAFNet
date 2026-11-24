@@ -1,0 +1,22 @@
+# Môi trường ảo
+.venv/
+
+# Tệp hệ thống do Google Drive Desktop / Windows tạo ra
+desktop.ini
+
+# Dữ liệu & kết quả thực nghiệm ở gốc repo (dùng dấu / đầu để KHÔNG bỏ qua src/data/)
+/data/
+/experiments/
+
+# Checkpoint / dữ liệu nhị phân
+*.pt
+*.h5
+*.npz
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/

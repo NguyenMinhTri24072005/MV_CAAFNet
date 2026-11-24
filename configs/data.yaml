@@ -1,0 +1,31 @@
+# Tham số tiền xử lý, chia tập dữ liệu — SPECS §0.3.4
+# Các giá trị đánh dấu "chốt ở Phase 1" sẽ được cập nhật sau notebooks/00_colab_data_survey.ipynb.
+paths:
+  # Đường dẫn mặc định trên Colab (nằm ngay trong DRIVE_ROOT/data/raw; ghi đè qua CLI khi chạy local)
+  lidc_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/LIDC-IDRI"
+  luna16_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/LUNA16"
+  index_dir: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/index"
+common:
+  patch_size: 64
+  hu_floor: -1000                # [A] cắt đáy HU (vùng ngoài khung quét của .mhd là -3024/-2048)
+  hu_window: [-1000, 400]        # [A] cửa sổ phổi; ứng viên khác [-1000, 150] — chốt ở Phase 1 (B9)
+  pad_value_hu: -1000            # [A] pad bằng giá trị không khí khi patch chạm biên ảnh
+  resample_mm: null              # [A] null = giữ spacing gốc; 1.0 = đưa mặt phẳng trục về 1 mm/pixel (B10)
+  resample_order: 1              # nội suy ảnh (1 = tuyến tính); mask luôn order 0
+  min_mask_area_px: 1            # [A] bỏ lát có diện tích mask < ngưỡng — chốt ở Phase 1 (B6)
+  include_other_nodules: true    # [A] nốt khác (đã qua lọc) lọt vào patch cũng gán nhãn 1 (B8)
+  center_jitter_px: 0            # [A] 0 = tâm cố định; 8 = jitter ±8 px cho S5 (Phase 8b)
+  workers: 4                     # 2–4 trên Colab Drive FUSE để không bị throttle
+lidc:
+  clevel: 0.5                    # [A] đồng thuận >= ceil(clevel * n_readers) (khớp chuẩn pylidc >= clevel)
+  min_readers: 1                 # [A] chốt ở Phase 1 để tổng patch gần 15.128 (13.928 + 1.200)
+  min_diameter_mm: 3.0           # [A] đường kính tương đương 3D (hoặc max-2D, chốt ở Phase 1) >= 3 mm
+luna16:
+  annotations_csv: annotations.csv
+  match_tolerance: radius        # khớp cụm DICOM-SEG ↔ annotations.csv khi khoảng cách tâm <= diameter_mm / 2
+  clevel: 0.5
+split:
+  mode: patient                  # [A] patient (chuẩn) | slice (chỉ dùng cho S1 ở Phase 8b)
+  seed: 2024                     # [A]
+  test_patches: 1200             # [P] Table 4
+  val_ratio: 0.1                 # [A] theo bệnh nhân (max(1, round(0.1 * n_remaining))), trên phần còn lại sau khi tách test

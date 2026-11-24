@@ -1,0 +1,14 @@
+# Colab Pro (CPU High-RAM cho Phase 1/5, GPU cho Phase 3-4 pytest và Phase 6-9) — SPECS §0.1
+# torch/torchvision KHÔNG ghim ở đây: dùng bản có sẵn trên runtime Colab (PyTorch >= 2.1).
+# KHÔNG dùng pylidc / SQLAlchemy<2 / numpy<2: data/raw/LIDC-IDRI là IDC DICOM-SEG, đọc bằng pydicom + SimpleITK.
+numpy
+scipy
+pandas
+h5py
+pyyaml
+pydicom
+SimpleITK
+scikit-image
+matplotlib
+tqdm
+pytest

@@ -1,0 +1,9 @@
+# Table 6: PAM + CAM tĩnh (không AAC) + Dice + Laplacian
+# SPECS §0.3.3 — chỉ ghi phần khác base.yaml (3 khóa định danh thực nghiệm ghi tường minh)
+base: base.yaml
+model:
+  name: caaf_resunet
+aaf:
+  mode: static
+loss:
+  name: dice+laplacian

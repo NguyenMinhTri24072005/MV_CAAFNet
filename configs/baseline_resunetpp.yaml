@@ -1,0 +1,7 @@
+# Table 7: ResUNet++ thuần (SE trong encoder, không AAC/AAF; aaf.mode bị bỏ qua)
+# SPECS §0.3.3 — chỉ ghi phần khác base.yaml (3 khóa định danh thực nghiệm ghi tường minh)
+base: base.yaml
+model:
+  name: resunetpp
+loss:
+  name: dice

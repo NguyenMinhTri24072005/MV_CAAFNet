@@ -1,0 +1,9 @@
+# Table 5, 6, 7: CAAF-ResUNet đầy đủ (AAC thích nghi) + Dice + Hausdorff-EDT
+# SPECS §0.3.3 — chỉ ghi phần khác base.yaml (3 khóa định danh thực nghiệm ghi tường minh)
+base: base.yaml
+model:
+  name: caaf_resunet
+aaf:
+  mode: adaptive
+loss:
+  name: dice+hausdorff
