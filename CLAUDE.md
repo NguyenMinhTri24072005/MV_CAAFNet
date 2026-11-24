@@ -15,13 +15,15 @@ Config comments tag every value: `[P]` from the paper, `[A]` team assumption, `[
 
 LUNA16 is a subset of LIDC-IDRI → never cross-train or merge the two datasets.
 
-## Where things run
+## Workflow: local = code only, Drive = data, Colab = compute, GitHub = transport
 
-- **Local Windows** (Python 3.12.10, `requirements-local.txt`): no torch installed. Only write code and run torch-free tests.
-- **Colab Pro CPU High-RAM**: data survey/indexing and preprocessing (notebooks `00_`, `01_`), working directly on Google Drive.
-- **Colab Pro GPU** (`requirements-colab.txt`): model/loss tests, training, evaluation, stats/figures (notebooks `10_`, `11_`, `12_`).
+- **Local Windows** (repo on an SSD, `.venv` with Python 3.12.10 + `requirements-local.txt`, no torch): only edit code/docs and run torch-free tests, then `git push` to `github.com/NguyenMinhTri24072005/MV_CAAFNet` (private, branch `main`). The local folder is **not** synced with Google Drive anymore.
+- **Google Drive** (`DRIVE_ROOT = /content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet`): holds all raw data (`data/raw/{LUNA16,LIDC-IDRI}`, ~233 GB) and every output (`data/index`, `data/processed`, `experiments/`, generated `reports/`).
+- **Colab Pro**: each notebook clones/pulls the repo (token from Colab Secrets `GH_TOKEN`), then reads/writes on Drive. CPU High-RAM for notebooks `00_`, `01_` (survey, preprocessing); GPU (`requirements-colab.txt`) for `10_`, `11_`, `12_` (tests with torch, train, evaluate, stats/figures).
 
-`/data/` and `/experiments/` are gitignored (note the leading `/` so `src/data/` is still tracked).
+Consequences: local `data/`, `experiments/` and `reports/` being empty says **nothing** about progress — results exist only on Drive, and the user pastes Colab logs/outputs into the chat when needed. Never try to download raw data locally. Code changes reach Colab only after commit + push. `/data/` and `/experiments/` are gitignored (leading `/` so `src/data/` is still tracked). `PLAN.md` still mentions `D:\GG_1` Drive mirroring; that setup is obsolete.
+
+The user prioritizes **LUNA16** first; LIDC-IDRI comes after the LUNA16 runs.
 
 ## Commands
 

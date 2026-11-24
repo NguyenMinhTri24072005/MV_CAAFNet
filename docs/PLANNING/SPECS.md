@@ -1025,7 +1025,7 @@ Mọi notebook đều tự đủ; **cell đầu tiên luôn là cell tham số**
 
 #### 1. `00_colab_data_survey.ipynb` (Colab CPU High-RAM)
 ```python
-REPO_URL = "https://github.com/<user>/<repo>.git"
+REPO_URL = "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"
 BRANCH = "main"
 DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
 
@@ -1041,7 +1041,7 @@ SAMPLE_OVERLAY_SCANS = 5                                                # số s
 
 #### 2. `01_colab_preprocess.ipynb` (Colab CPU High-RAM)
 ```python
-REPO_URL = "https://github.com/<user>/<repo>.git"
+REPO_URL = "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"
 BRANCH = "main"
 DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
 
@@ -1065,7 +1065,7 @@ RUN_PACK = True
 
 #### 3. `10_colab_train.ipynb` (Colab GPU — đủ 100% 20 CLI arg của `src.train` + `pytest`)
 ```python
-REPO_URL = "https://github.com/<user>/<repo>.git"
+REPO_URL = "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"
 BRANCH = "main"
 DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
 DRIVE_DATA_SUBDIR = "data/processed"   # đổi thành "data/processed_s1_slice" cho S1
@@ -1105,7 +1105,7 @@ EXTRA_SET = []                         # lặp --set
 
 #### 4. `11_colab_evaluate.ipynb` (Colab GPU — đủ 100% 8 CLI arg của `src.evaluate`)
 ```python
-REPO_URL = "https://github.com/<user>/<repo>.git"
+REPO_URL = "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"
 BRANCH = "main"
 DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
 DRIVE_DATA_SUBDIR = "data/processed"
@@ -1127,7 +1127,7 @@ SAVE_PREDS = True                      # --save-preds / --no-save-preds
 
 #### 5. `12_colab_stats_figures.ipynb` (Colab GPU — đủ 100% CLI của `report`, `stats_test`, `visualize`)
 ```python
-REPO_URL = "https://github.com/<user>/<repo>.git"
+REPO_URL = "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"
 BRANCH = "main"
 DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
 DRIVE_DATA_SUBDIR = "data/processed"
