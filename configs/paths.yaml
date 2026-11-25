@@ -22,8 +22,8 @@ drive:
   mount_point: "/content/drive"
   root: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"   # = DRIVE_ROOT trong notebook
   raw:
-    luna16: "data/raw/LUNA16"                    # cấu trúc thực tế sẽ xác nhận sau bước khảo sát ở các notebook đầu
-    lidc: "data/raw/LIDC-IDRI"                   # cấu trúc thực tế sẽ xác nhận sau bước khảo sát ở các notebook đầu
+    luna16: "data/raw/Extracted/LUNA16"          # dữ liệu đã giải nén; cấu trúc thực tế sẽ xác nhận sau bước khảo sát ở các notebook đầu
+    lidc: "data/raw/Extracted/LIDC-IDRI"         # dữ liệu đã giải nén; cấu trúc thực tế sẽ xác nhận sau bước khảo sát ở các notebook đầu
   processor: "data/processor"                    # toàn bộ notebook dùng để xử lý dữ liệu (cùng cấp với data/raw trên Drive)
   index: "data/index"                            # ct_scans.csv, seg_index.csv, luna16_scans.csv, index_summary.json, survey_* (notebook 00)
   interim: "data/interim/{ds}"                   # patches_hu.npy, masks.npy, patches.csv, by_scan/<series_uid>/_DONE (notebook 01)

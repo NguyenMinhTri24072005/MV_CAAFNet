@@ -309,7 +309,7 @@ class TestLoadConfig:
 # ---------------------------------------------------------------------------
 class TestConfigFiles:
     def test_exactly_ten_experiment_configs(self):
-        stems = {p.stem for p in CONFIG_DIR.glob("*.yaml")} - {"base", "data"}
+        stems = {p.stem for p in CONFIG_DIR.glob("*.yaml")} - {"base", "data", "paths"}
         assert stems == set(EXPERIMENTS)
 
     def test_experiments_are_distinct(self):
@@ -390,8 +390,8 @@ class TestConfigFiles:
     def test_data_yaml(self):
         cfg = load_config(DATA_YAML)
         assert set(cfg) == {"paths", "common", "lidc", "luna16", "split"}
-        assert cfg["paths"]["lidc_raw"].endswith("MV_CAAFNet/data/raw/LIDC-IDRI")
-        assert cfg["paths"]["luna16_raw"].endswith("MV_CAAFNet/data/raw/LUNA16")
+        assert cfg["paths"]["lidc_raw"].endswith("MV_CAAFNet/data/raw/Extracted/LIDC-IDRI")
+        assert cfg["paths"]["luna16_raw"].endswith("MV_CAAFNet/data/raw/Extracted/LUNA16")
         assert cfg["paths"]["index_dir"].endswith("MV_CAAFNet/data/index")
         common = cfg["common"]
         assert common["patch_size"] == load_config(BASE_YAML)["data"]["patch_size"] == 64

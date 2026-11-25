@@ -207,9 +207,9 @@ eval:
 #### 0.3.4 `configs/data.yaml`
 ```yaml
 paths:
-  # Đường dẫn mặc định trên Colab (nằm ngay trong DRIVE_ROOT/data/raw; ghi đè qua CLI khi chạy local)
-  lidc_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/LIDC-IDRI"
-  luna16_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/LUNA16"
+  # Đường dẫn mặc định trên Colab (nằm trong DRIVE_ROOT/data/raw/Extracted; ghi đè qua CLI khi chạy local)
+  lidc_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/Extracted/LIDC-IDRI"
+  luna16_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/Extracted/LUNA16"
   index_dir: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/index"
 common:
   patch_size: 64
@@ -1029,8 +1029,8 @@ REPO_URL = "https://github.com/NguyenMinhTri24072005/MV_CAAFNet.git"
 BRANCH = "main"
 DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet"
 
-RAW_LIDC_DIR = f"{DRIVE_ROOT}/data/raw/LIDC-IDRI"                       # --lidc-dir
-RAW_LUNA16_DIR = f"{DRIVE_ROOT}/data/raw/LUNA16"                        # --luna16-dir
+RAW_LIDC_DIR = f"{DRIVE_ROOT}/data/raw/Extracted/LIDC-IDRI"             # --lidc-dir
+RAW_LUNA16_DIR = f"{DRIVE_ROOT}/data/raw/Extracted/LUNA16"              # --luna16-dir
 INDEX_OUT_DIR = f"{DRIVE_ROOT}/data/index"                              # --out-dir
 WORKERS = 4                                                             # --workers
 RUN_BUILD_INDEX = True                                                  # False nếu data/index đã có sẵn trên Drive
@@ -1047,8 +1047,8 @@ DRIVE_ROOT = "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208
 
 DATASET = "luna16"                                                      # "luna16" | "lidc"
 DATA_CFG = "configs/data.yaml"                                          # --config
-RAW_LIDC_DIR = f"{DRIVE_ROOT}/data/raw/LIDC-IDRI"                       # --lidc-dir / --raw-dir
-RAW_LUNA16_DIR = f"{DRIVE_ROOT}/data/raw/LUNA16"                        # --raw-dir (khi luna16)
+RAW_LIDC_DIR = f"{DRIVE_ROOT}/data/raw/Extracted/LIDC-IDRI"             # --lidc-dir / --raw-dir
+RAW_LUNA16_DIR = f"{DRIVE_ROOT}/data/raw/Extracted/LUNA16"              # --raw-dir (khi luna16)
 INDEX_DIR = f"{DRIVE_ROOT}/data/index"                                  # --index-dir
 INTERIM_DIR = f"{DRIVE_ROOT}/data/interim/{DATASET}"                    # --out-dir (có _DONE để resume nếu ngắt phiên)
 SPLITS_OUT = f"{DRIVE_ROOT}/data/splits/{DATASET}.json"                 # --out (make_splits)

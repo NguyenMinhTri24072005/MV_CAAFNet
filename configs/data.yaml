@@ -1,9 +1,9 @@
 # Tham số tiền xử lý, chia tập dữ liệu — SPECS §0.3.4
 # Các giá trị đánh dấu "chốt ở Phase 1" sẽ được cập nhật sau notebooks/00_colab_data_survey.ipynb.
 paths:
-  # Đường dẫn mặc định trên Colab (nằm ngay trong DRIVE_ROOT/data/raw; ghi đè qua CLI khi chạy local)
-  lidc_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/LIDC-IDRI"
-  luna16_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/LUNA16"
+  # Đường dẫn mặc định trên Colab (nằm trong DRIVE_ROOT/data/raw/Extracted; ghi đè qua CLI khi chạy local)
+  lidc_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/Extracted/LIDC-IDRI"
+  luna16_raw: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/raw/Extracted/LUNA16"
   index_dir: "/content/drive/MyDrive/COMPUTER SCIENCE/NAM4_HK1_(2026-2027)/CT208E/MV_CAAFNet/data/index"
 common:
   patch_size: 64
